@@ -1,107 +1,70 @@
-@import url('https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap');
-
-html, body{
-    height: 100vh;
-    margin: 0;
+body, html{
     padding: 0;
-}
-
-.selected{
-    color: rgb(79, 112, 222);
-    background-color: aliceblue;
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Exo 2", sans-serif;
 }
 
 body{
-    font-family: "Spicy Rice";
-    display: grid;
-    grid-template-rows: 80px 3fr;
-    background-color: lightblue;
+    background: linear-gradient(rgba(240, 48, 48, 0.688), rgba(235, 192, 101, 0.83));
+    display: flex;
 }
 
-#content{
+.content{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 30px;
+    flex: 1;
+    justify-content: center;
 }
 
-.header{
-    align-content: center;
-    background-color: rgb(255, 255, 255);
-}
-
-.Pizza{
-    display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(150px, 1fr) );
-    column-gap: 40px;
-    padding: 8px; 
-    gap: 8px;
-}
-
-.nav{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 40px;
-    padding: 8px;
-}
-
-button{
-    font-family: "Spicy Rice";
-    font-size: 1rem;
-    border-radius: 10px 10px;
-    border: 0;
-    padding: 10px 12px;
-    cursor: pointer;
-    color: black;
-}
-
-button:active{
-    background-color: azure;
-    border: 1px solid gainsboro;
+#Form{
+    background-color: white;
+    border-radius: 2.5rem;
+    align-self: center;
+    box-shadow: rgba(0, 0, 0, 0.636) 0.3rem 0.3rem 0.1rem;
 }
 
 h1{
-    font-size: 2.5rem;
+    text-align: center;
+    font-size: 2rem;
     margin: 0;
 }
 
-.centrado{
-    text-align: center;
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
 }
 
-.photo, .menu, .location{
-    border-radius: 18px;
-    justify-self: center;
+form > * {
+    margin: 0.2rem;
 }
 
-.photo{
-    height: max(60%, 90%);
-    width: max(60%, 80%);
+label{
+    font-size: 1rem;
 }
 
-.menu{
-    width: clamp(100px, 35vw, 350px);
-    height: clamp(150px, 35vw, 350px); 
-    align-self: center; 
+input{
+    border-radius: 0.5rem;
+    border: 0.1rem solid black;
+    height: 1.5rem;
+    width: 12rem;
+    transition: background-color 1s, box-shadow 1s;
 }
 
-.location{
-    width: clamp(100px, 50vw, 400px);
-    height: clamp(100px, 35vw, 250px); 
+input:focus{
+    background-color: rgba(156, 156, 255, 0.33);
+    box-shadow: rgba(0, 0, 0, 0.636) 0.1rem 0.1rem 0.5rem;
 }
 
-.container{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 16px;
-}
-
-#content div > p{
-    align-self: center;
-    text-align: justify;
-}
-
-.menuText{
-    justify-self: center;
-    padding: 0;
+button{
+    background-color: rgb(52, 58, 233);
+    border: 0;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    color: white;
+    font-weight: bolder;
+    font-size: 1rem;
+    font-family: "Exo 2", sans-serif;
+    cursor: pointer;
 }
